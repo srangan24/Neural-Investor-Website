@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar">
+		<span class="open-slide"> <a href="#" onclick="openSlideMenu()">
+				<svg width="35" height="60" id="navigation">
+						<path d="M0,5 35,5" stroke="fff" stroke-width="4" />
+						<path d="M0,14 35,14" stroke="#fff" stroke-width="4" />
+						<path d="M0,23 35,23" stroke="#6db6db" stroke-width="4" />
+						<path d="M0,32 35,32" stroke="#fff" stroke-width="4" />
+						<path d="M0,41 35,41" stroke="#fff" stroke-width="4" />
+				</svg>
+		</a>
+		</span>
+		<div id="side-menu" class="side-nav">
+			<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			<a href="index.jsp">Home</a> 
+			<a href="About.html">About</a> 
+			<a href="HIW.html">How It Works</a>
+		</div>
+		<div class="title">
+			<h1>How Does it Work?</h1>
+		</div>
+	</nav>
+	<script>
+			function openSlideMenu() {
+				document.getElementById('side-menu').style.width = '150px';
+				var x = document.getElementById("navigation");
+				x.style.display = "none";
+			}
+			
+			function closeSlideMenu() {
+				document.getElementById('side-menu').style.width = '0';
+				setTimeout(unhideSlideMenu, 300);
+			}
+	
+			function unhideSlideMenu() {
+				var x = document.getElementById("navigation");
+				x.style.display = "block";
+			}
+	
+	</script>
+	
+			<div class = "row">
+			<div class = "col-sm-2"></div>
+			<div class = "col-sm-6">
+				
+			</div>
+		</div>
+		
+		
+	<div class = "row"><br><br></div>
+	<div class = "container">
+		<h2>Step 1</h2>
+		<p>The network takes in two inputs, each between -1 and 1. These are decimals expressed as percentages that represent information about a company. These express different characteristics of company growth. Based on test data the network will be able to predict an investment success chance. </p>
+		<br>
+		<h2>Step 2</h2>
+		<p>The network has three layers, input, hidden, and output. The hidden value uses weights and biases to make an algorithm that outputs a binary value, 0 or 1, success or failure. The test values have values that are known to correlate to an output value. </p>
+		<br>
+		<h2>Step 3</h2>
+		<p>The neural network iterates through all of these values a set number of times. The user, based on their presences and insight knowledge on their investment, can choose to execute a sigmoid function or a hyperbolic function to execute their code, based on what they think is more efficient.</p>		
+		<br><br>
+		<h2>Equations and Calculations</h2>
+		
+		<iframe src="https://drive.google.com/file/d/1SQPWEOFN3Q-0QV_Vd2BRANzut2uOO1fg/preview" width="640" height="340"></iframe>
+		<br>
+		<p>The algorithm weights and biases are initially set to a random value. The hidden layer uses these values to calculate an output. The value of the first two numbers is determined to be a 1 or 0. If the output doesn’t match the known result, then a backward propagation technique is started. </p>
+		<br>
+		
+		<iframe src="https://drive.google.com/file/d/1kvwp3A-XlFHA9wFYb2wmxxqAeY3Ew3Of/preview" width="640" height="180"></iframe>
+		
+		<p>The backward propagation technique uses a bit of calculus to calculate the factor by how much to change the weights and the bias by. This is done with the margin of error which can be calculated in a similar manner as seen above. So after the program encounters a value that outputs an incorrect value, it will initiate backward propagation which will then alter the algorithm to accommodate for this next value. <p>
+		<br>
+		<p>The network will then keep iterating through all 250 values a set number of times so that it creates an efficient algorithm that accommodates for the most values as possible. In the final iteration of the 250 test data (which has been completely randomized), the program will count how many times the network was successful. This will give the success percentage to the user. The two user input values will then be plugged into the algorithm, which will result in a 1 or 0. Based on this data, the user can decide whether or not to make an investment in the company of his or her choice. </p>
+		<br>
+		<p>The HTML to Java is transferred through JSP. This is what transfers the data between the user input and the program as well as the network output and the display on the website. No machine libraries were used, no APIs, and the code was done manually. </p>
+		<br><br>
+		<h2>Credit</h2>
+		<p>Picture credit & based on:</p><a href="Picture credit & based on: https://stevenmiller888.github.io/mind-how-to-build-a-neural-network/">https://stevenmiller888.github.io/mind-how-to-build-a-neural-network/</a>
+	</div>
+</body>
+</html>

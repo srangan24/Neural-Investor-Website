@@ -1,0 +1,63 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="navbar">
+		<span class="open-slide"> <a href="#" onclick="openSlideMenu()">
+				<svg width="35" height="60" id="navigation">
+						<path d="M0,5 35,5" stroke="fff" stroke-width="4" />
+						<path d="M0,14 35,14" stroke="#6db6db" stroke-width="4" />
+						<path d="M0,23 35,23" stroke="#fff" stroke-width="4" />
+						<path d="M0,32 35,32" stroke="#fff" stroke-width="4" />
+						<path d="M0,41 35,41" stroke="#fff" stroke-width="4" />
+				</svg>
+		</a>
+		</span>
+		<div id="side-menu" class="side-nav">
+			<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+			<a href="index.jsp">Home</a> 
+			<a href="About.html">About</a> 
+			<a href="HIW.html">How It Works</a>
+		</div>
+		<div class="title">
+			<h1>About Us</h1>
+		</div>
+	</nav>
+	<script>
+			function openSlideMenu() {
+				document.getElementById('side-menu').style.width = '150px';
+				var x = document.getElementById("navigation");
+				x.style.display = "none";
+			}
+			
+			function closeSlideMenu() {
+				document.getElementById('side-menu').style.width = '0';
+				setTimeout(unhideSlideMenu, 300);
+			}
+	
+			function unhideSlideMenu() {
+				var x = document.getElementById("navigation");
+				x.style.display = "block";
+			}
+	
+	</script>
+		<br><br><br>
+	<div class = "row">
+		<div class = "col-sm-2"></div>
+		<div class = "col-sm-3">
+			<h2>What is the Stock Market?</h2>
+			<p>The Stock Market is the location where investors can buy and sell investments into public companies and corporations. This process allows investors to gain a share of ownership of the company. There are several different types of stocks which investors can invest in. The goal of investors when buying and selling stocks are to turn a profit through the movement of the stock prices.</p>
+		</div>
+		<div class = "col-sm-3">
+			<h2>Why invest?</h2>
+			<p>Investors use their personal money to finance a company, with the intent of creating profit from an incline of the stock price. The benefit of investing money into the Stock Market is the possibility of growing the money without having to do too much work. An invest notice trends in companies and targets the time when to invest. The timing of this movement is key, however, sometimes investors don’t know exactly if it statistically makes sense. This is where NueralInvester comes into play.</p>
+		</div>
+		<div class = "col-sm-3">
+			<h2>How to use NeuralInvester?</h2>
+			<p>NueralInvester enables investors whether or not to invest in a particular company using a Neural Network. The program requires some basic financial information about the particular stock to generate an accurate output. The neural Network continues to develop on itself which creates more accurate and sophisticated outputs from very basic information!</p>
+		</div>
+	</div>
+	
+</body>
+</html>
